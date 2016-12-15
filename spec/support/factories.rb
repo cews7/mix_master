@@ -1,6 +1,13 @@
 FactoryGirl.define do
-  factory :artist do
-    name       "Bob Marley"
-    image_path "http://cps-static.rovicorp.com/3/JPG_400/MI0003/146/MI0003146038.jpg"
-  end
+ factory :artist do
+   name       { Faker::Name.name }
+   image_path { Faker::Avatar.image }
+ end
+ factory :song do
+   title { Faker::Book.title }
+   artist { FactoryGirl.create(:artist) }
+ end
+ factory :playlist do
+   name { Faker::Book.genre }
+ end
 end
