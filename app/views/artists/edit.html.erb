@@ -1,7 +1,2 @@
-<%= form_for @artist do |f|%>
-<%= f.label :name %><br />
-<%= f.text_field :name %><br />
-<%= f.label :image_path %><br />
-<%= f.text_field :image_path %>
-<%= f.submit %>
-<% end %>
+<h1>Edit Artist</h1>
+<%= render partial: "form" %>
